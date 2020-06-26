@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <br><br>
+  <title>Diabetes Predictor</title>
+  
+</head>
+
+<body style="background-color:gray;">
+ <div class="login">
+  <h1 align="center">Diabetes Predictor</h1>
+  <br><br>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form align="center" action="{{ url_for('predict')}}"method="post">
+      
+        <input type="number" name="Pregnancies" placeholder="Pregnancies" required="required" />
+       <br><br>
+       <input type="number" name="Glucose" placeholder="Glucose" required="required" />
+       <br><br>
+       <input type="number" name="BloodPressure" placeholder="Blood Pressure" required="required" />
+       <br><br>
+       <input type="number" name="SkinThickness" placeholder="Skin Thickness" required="required">
+       <br><br>
+       <input type="number"  step=any name="Insulin" placeholder="Insulin" required="required" />
+      <br><br>
+      <input type="number"  step=any name="BMI" placeholder="BMI" required="required" />
+      <br><br>
+      <input type="number"   step=any  name="DiabetesPedigreeFunction" placeholder="Diabetes Pedigree Function (DPF)" required="required"/>
+      <br><br>
+      <input type="number" name="Age" placeholder="Age" required="required"/>
+      <br><br><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   <br>
+   <h2 align="center">{{ prediction_text }}</h2>
+   
+
+ </div>
+
+
+</body>
+</html>
