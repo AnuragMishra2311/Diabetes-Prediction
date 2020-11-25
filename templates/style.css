@@ -1,0 +1,25 @@
+.heading{
+font-size: 17px;
+color: darkgoldenrod;
+font-style: italic;
+}
+
+.button {
+  padding: 10px 10px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #1b096b;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #881f11}
+
+.button:active {
+  box-shadow: 0 5px rgb(85, 0, 0);
+  transform: translateY(4px);
+}
